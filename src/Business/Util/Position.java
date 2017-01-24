@@ -36,4 +36,9 @@ public class Position {
         }
         return false;
     }
+    
+    @Override
+    public String toString(){
+        return "(Axe x: "+this.getX()+"; Axe y:"+this.getY()+")";
+    }
 }

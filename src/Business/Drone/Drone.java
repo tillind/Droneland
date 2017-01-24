@@ -90,4 +90,52 @@ public abstract class Drone {
     public void addColis(Colis obj){
         this.lesColis.add(obj);
     }
+    
+    public void deplacement(Position position){
+          this.laDestination = position;
+          
+          Position debug= new Position(0, 0);
+          int tmpDist=0;
+          while(!this.laPosition.equals(this.laDestination)){
+              if(laPosition.getX() != this.laDestination.getX()){
+                    if(laPosition.getX() < this.laDestination.getX()){
+                       /* tmpDist =  laPosition.getX()+vitesseMax;     
+                        if((laDestination.getX()-laPosition.getX()) < vitesseMax ){
+                            tmpDist = laPosition.getX() +( laDestination.getX()-laPosition.getX());
+                        }
+                        laPosition.setX(tmpDist);
+                        debug.setX(tmpDist);*/
+                    }
+                    else{
+                        tmpDist =  laPosition.getX()-vitesseMax;
+                        if((laDestination.getX()-laPosition.getX()) > vitesseMax*-1 ){
+                            tmpDist = laPosition.getX()-( laDestination.getX()-laPosition.getX());                        
+                        }
+                        laPosition.setX(tmpDist);
+                        debug.setX(tmpDist);
+                    }
+                    
+              }
+               if(laPosition.getY() != this.laDestination.getY()){
+                    if(laPosition.getY() < this.laDestination.getY()){
+                     /*   tmpDist =  laPosition.getY()+vitesseMax;    
+                        if((laDestination.getY()-laPosition.getY()) < vitesseMax ){
+                            tmpDist =laPosition.getY() +( laDestination.getY()-laPosition.getY());
+                        }
+                        laPosition.setY(tmpDist);
+                        debug.setY(tmpDist);*/
+                    }
+                    else{
+                        tmpDist =  laPosition.getY()-vitesseMax;
+                        if((laDestination.getY()-laPosition.getY()) > vitesseMax*-1){
+                            tmpDist =laPosition.getY() +( laDestination.getY()-laPosition.getY());
+                         }
+                        laPosition.setY(tmpDist);
+                        debug.setY(tmpDist);
+                    }
+               }
+                     
+              System.out.println(debug.toString());
+          }
+    }
 }
