@@ -1,6 +1,6 @@
 package Business.Drone;
 
-import Business.Util.Batterie;
+import Business.Util.Batterie.Batterie;
 import Business.Util.Position;
 
 /**

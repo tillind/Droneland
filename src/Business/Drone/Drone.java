@@ -1,6 +1,6 @@
 package Business.Drone;
 
-import Business.Util.Batterie;
+import Business.Util.Batterie.Batterie;
 import Business.Util.Colis;
 import Business.Util.EtatDrone;
 import Business.Util.Position;
@@ -75,12 +75,9 @@ public abstract class Drone {
     public void setLaPosition(Position laPosition) {
         this.laPosition = laPosition;
     }
-
-
     public Batterie getLaBatterie() {
         return laBatterie;
     }
-
     public void setLaBatterie(Batterie laBatterie) {
         this.laBatterie = laBatterie;
     }
@@ -99,12 +96,12 @@ public abstract class Drone {
           while(!this.laPosition.equals(this.laDestination)){
               if(laPosition.getX() != this.laDestination.getX()){
                     if(laPosition.getX() < this.laDestination.getX()){
-                       /* tmpDist =  laPosition.getX()+vitesseMax;     
+                        tmpDist =  laPosition.getX()+vitesseMax;     
                         if((laDestination.getX()-laPosition.getX()) < vitesseMax ){
                             tmpDist = laPosition.getX() +( laDestination.getX()-laPosition.getX());
                         }
                         laPosition.setX(tmpDist);
-                        debug.setX(tmpDist);*/
+                        debug.setX(tmpDist);
                     }
                     else{
                         tmpDist =  laPosition.getX()-vitesseMax;
@@ -118,12 +115,12 @@ public abstract class Drone {
               }
                if(laPosition.getY() != this.laDestination.getY()){
                     if(laPosition.getY() < this.laDestination.getY()){
-                     /*   tmpDist =  laPosition.getY()+vitesseMax;    
+                        tmpDist =  laPosition.getY()+vitesseMax;    
                         if((laDestination.getY()-laPosition.getY()) < vitesseMax ){
                             tmpDist =laPosition.getY() +( laDestination.getY()-laPosition.getY());
                         }
                         laPosition.setY(tmpDist);
-                        debug.setY(tmpDist);*/
+                        debug.setY(tmpDist);
                     }
                     else{
                         tmpDist =  laPosition.getY()-vitesseMax;

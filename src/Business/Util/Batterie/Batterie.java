@@ -1,4 +1,4 @@
-package Business.Util;
+package Business.Util.Batterie;
 
 /**
  * Created by alexandre on 18/01/2017.

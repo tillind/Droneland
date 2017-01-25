@@ -2,7 +2,7 @@ package Main;
 
 import Business.Drone.DroneTerrestre;
 import Business.Drone.RepTer;
-import Business.Util.Batterie;
+import Business.Util.Batterie.Batterie;
 import Business.Util.Position;
 
 /**
@@ -13,5 +13,8 @@ public class testMethode {
          RepTer testDrone = new RepTer(1500, 4, 0, new Batterie(0, 0), new Position(15, 40));
          
          testDrone.deplacement(new Position(5, 30));
+         testDrone.deplacement(new Position(15,40));
+         
+         testDrone.deplacement(new Position(50, 30));
      }
 }
