@@ -5,14 +5,17 @@
  */
 package Controller;
 
+import Business.Factory.FacadeParc;
+
 /**
  *
  * @author alexandre
  */
 public class AppsController {
+        private FacadeParc laFacade = null;
 
-    public AppsController(){
-        
-    }
+        public AppsController(){
+
+        }
    
 }

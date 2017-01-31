@@ -10,14 +10,24 @@ import java.util.List;
  * Created by alexandre on 18/01/2017.
  */
 public class Parc {
+    
+    private static Parc leParc = null;
+    
     private List<DroneTerrestre> lesDronesTerrestre;
     private List<DroneVolant> lesDroneVolant;
 
-    public Parc(){
+    private Parc(){
         this.lesDronesTerrestre = new LinkedList<>();
         this.lesDroneVolant = new LinkedList<>();
     }
 
+    public static Parc  getParc(){
+        if(leParc == null){
+            leParc = new Parc();
+        }
+        return leParc;
+    }
+    
     public void ajoutDrone(DroneTerrestre monDrone){
         this.lesDronesTerrestre.add(monDrone);
     }
